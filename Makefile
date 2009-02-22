@@ -17,5 +17,8 @@ clean:
 	rm -rf *.o
 
 mrproper: clean
+	rm -rf doc/
 	rm -rf $(EXEC)
-			
+
+doc: mrproper
+	doxygen Doxyfile
