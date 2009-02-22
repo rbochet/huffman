@@ -8,7 +8,8 @@
 #include "io.h"
 
 
-/*!
+/*! 
+\author Romain BOCHET 
 \brief Remplit un tableau de feuilles correspondant au tableau des occurences
 \param occ Le tableau TRIÉ des occurences sous forme de couple
 \param nocc Le tableau dans lequel on range les noeuds
@@ -33,7 +34,8 @@ int remplitNodeOccurences(COUPLE occ[MAX_CAR], ARBRE nocc[MAX_CAR])
 }
 
 
-/*!
+/*! 
+\author Romain BOCHET 
 \brief Construit l'arbre à partir du tableau de des noeuds
 \param racine L'arbre sera construit dans racine
 \param nocc le tableau des noeuds
@@ -80,7 +82,8 @@ int creeArbre(ARBRE *racine, ARBRE nocc[MAX_CAR], unsigned short len)
   return 0;
 }
 
-/*!
+/*! 
+\author Romain BOCHET 
 \brief Trie le tablea des noeuds
 \param tab Le tableau à trier
 \param longueur La longeur sur laquelle on doit trier le tableau
@@ -110,7 +113,8 @@ int trieNoeuds(ARBRE tab[MAX_CAR], int longueur)
   return 0;
 }
 
-/*!
+/*! 
+\author Romain BOCHET 
 \brief Libère la mémoire occupée par un arbre
 \param root Arbre à libérer
 */
@@ -126,7 +130,8 @@ int freeArbre(ARBRE root)
   return 0;
 }
 
-/*!
+/*! 
+\author Romain BOCHET 
 \brief Affiche les infos du node en question (type, poids, éventuellement caractère)
 */
 int afficherNode(ARBRE root)

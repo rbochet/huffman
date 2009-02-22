@@ -6,7 +6,7 @@
 #include "io.h"
 #include "coefficients.h"
 
-/*!
+/*! \author Romain BOCHET 
 \brief Crée un tableau des occurences d'apparition d'un caractère dans un fichier
 \param tab Le tableau à remplir
 \param fd Le fichier à analyser
@@ -49,7 +49,7 @@ int remplitOccurences(COUPLE tab[MAX_CAR], FILE* fd)
   return 0;
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Trie le tableau des occurences (les plus fréquentes au début)
 \param tab Le tableau à trier
 */
@@ -82,7 +82,7 @@ int trieOccurences(COUPLE tab[MAX_CAR])
   return 0;
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Affiche un tableau d'occurences
 \param tab Le tableau à afficher
 */
@@ -100,7 +100,7 @@ int afficheOccurences(COUPLE tab[MAX_CAR])
   return 0;
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Calcule la longueur utile dans le tableau (apparitions != 0)
 \param tab Le tableau à trier
 \return La longueur des données utiles
@@ -115,7 +115,7 @@ unsigned short lenUtile(COUPLE tab[MAX_CAR])
   return longueur;
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Ecrit dans un flux le contenu du fichier au format 'pseudo-binaire'
 \param racine L'arbre de Huffman
 \param entree Le flux d'entree
@@ -139,7 +139,7 @@ int compresseTexteCar(ARBRE racine, FILE *entree, FILE *sortie)
 
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Donne une valeur affichable d'un caractère (\n, ACK, ...)
 \param c Le caractère
 \return Le caractère si il appartient à [32, 126], ou un point '.'

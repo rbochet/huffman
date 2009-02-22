@@ -6,7 +6,7 @@
 #include "coefficients.h"
 #include "io.h"
 
-/*!
+/*! \author Romain BOCHET 
 \brief Parcours de manière récursive l'arbre pour trouver le code d'un caractère
 \param racine Racine de l'arbre de Huffman
 \param c Caractère à trouver
@@ -42,7 +42,7 @@ int coeffCarRec(ARBRE racine, char c, char *ret)
 
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Affiche la correspondance binaire d'un caractère
 \param racine L'arbre de Huffman
 \param c Le caractère qu'on recherche
@@ -57,7 +57,7 @@ int afficheCoeffCar(ARBRE racine, char c)
   return 0;
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Affiche la table de tous les symboles de l'arbre et de leur code correspondant
 \param racine L'arbre à analyser
 */
@@ -70,7 +70,7 @@ int afficheTable(ARBRE racine)
   return 0;
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Affiche la table de tous les symboles de l'arbre et de leur code correspondant
 \param racine L'arbre à analyser
 \param noeudCourant Le sous arbre pointé
@@ -90,7 +90,7 @@ int afficheTableRec(ARBRE racine, ARBRE noeudCourant)
   return 0;
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Renvoie le code binaire d'un caractère dans *ret
 \param racine Racine de l'arbre de Huffman
 \param c Caractère à trouver
@@ -107,7 +107,7 @@ int coeffCar(ARBRE racine, char c, char **ret)
   return 0;
 }
 
-/*!
+/*! \author Romain BOCHET 
 \brief Affiche des statistiques sur la compression
 \param racine L'arbre de Huffman
 \param entree Le fichier qui a été analysé
@@ -126,8 +126,9 @@ int stats(ARBRE racine, FILE * entree)
   return 0;
 }
 
-/*!
-\brief Calcule des infos sur la sortie de*
+/*! \author Romain BOCHET 
+\brief Calcule des infos sur la sortie du compresseur
+\warning Le ratio est calculé en prenant en compte la sortie sous forme "compressée", càd pas affichable.
 \param racine L'arbre de Huffman
 \param entree Le fichier ananlysé
 \param size Résultat : modifié pour contenir la taille des données une fois compressées
